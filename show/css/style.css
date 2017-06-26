@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+}
+#rudr_instafeed{
+	margin: 0;
+  list-style:none;
+  padding: 0px;
+}
+#rudr_instafeed li{
+  float:left;
+  width: 14%;
+  height: 14%;
+  margin: 1px;
+}
+#rudr_instafeed li img{
+  max-width:100%;
+  max-height:100%;
+}
