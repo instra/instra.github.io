@@ -4,8 +4,8 @@
 
     this.api = Instajam.init({
       clientId: 'b8b0534854bf45588f6107f24839f6a5',
-      redirectUri: 'https://instra.github.io/',
-      scope: ['basic', 'comments', 'relationships','likes']
+      redirectUri: 'https://instra.github.io/index.html',
+      scope: ['basic', 'comments', 'relationships', 'likes']
     });
 
     this.$window = $(window);
@@ -23,6 +23,7 @@
   sandbox.render = function() {
 
     var that = this;
+    console.log(that.api);
 
     that.$main.html(that.template(that.api));
 
@@ -249,6 +250,10 @@
 
 $(function() {
   window.sandbox.init();
+  var ta = localStorage.getItem("instagram_access_token");
+  var insta = 'https://instra.github.io/show/index.html?code=' + ta;
+  console.log(insta);
+  $('.iframe').html('<iframe src="'+insta+'" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>')
 });
 
 window.partial = function(name, data) {
