@@ -1,29 +1,10 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @Danilows
- Sign out
- Unwatch 1
-  Star 0
- Fork 0 Danilows/insta
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights 
-Branch: master Find file Copy pathinsta/js/app.js
-3b3e359  8 days ago
-@Danilows Danilows upedte
-1 contributor
-RawBlameHistory     
-256 lines (198 sloc)  5.49 KB
 (function(sandbox) {
 
   sandbox.init = function() {
 
     this.api = Instajam.init({
       clientId: 'b8b0534854bf45588f6107f24839f6a5',
-      redirectUri: 'https://danilows.github.io/insta/',
+      redirectUri: 'https://instra.github.io/',
       scope: ['basic', 'comments', 'relationships','likes']
     });
 
@@ -273,5 +254,3 @@ $(function() {
 window.partial = function(name, data) {
   return _.template( $('script[name="' + name + '"]').html(), data);
 };
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
