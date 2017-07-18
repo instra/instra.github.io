@@ -27,19 +27,19 @@ $.ajax({
 	success: function(data){
 		for( x in data.data ){
 			if(x==0) {
-				console.log(X+'é 0');
+				console.log(x+' é 0');
 				$('.carousel-inner').append('<div class="item active"><ul class="thumbnails"><li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			} else if(x==7) {
-				console.log(X+'é 7');
+				console.log(x+' é 7');
 				$('.carousel-inner').append('</ul></div><div class="item"><ul class="thumbnails"><li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			} else if(x==14) {
-				console.log(X+'é 14');
+				console.log(x+' é 14');
 				$('.carousel-inner').append('</ul></div><div class="item"><ul class="thumbnails"><li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			} else if(x==data.data.length) {
-				console.log(X+'é'+data.data.length);
+				console.log(x+'é'+data.data.length);
 				$('.carousel-inner').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li></ul></div>');
 			} else {
-				console.log(X+'é normal');
+				console.log(x+' é normal');
 				$('.carousel-inner').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			
