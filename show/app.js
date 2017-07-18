@@ -34,21 +34,21 @@ $.ajax({
 			if(x==7) {
 				console.log(x+' é 7');
 				$('.carousel-inner').append('<div class="item"><ul class="thumbnails"></ul></div>');
-				var im = true;			
+				var io = true;			
 			}
 			if(x==14) {
 				console.log(x+' é 14');
 				$('.carousel-inner').append('<div class="item"><ul class="thumbnails"></ul></div>');
-				var im = true;
+				var ip = true;
 			}			
 			if(im==true) {
-				$('.carousel-inner .item:nth-child(0) .thumbnails"').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(0) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(io==true) {
-				$('.carousel-inner .item:nth-child(1) .thumbnails"').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(1) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(ip==true) {
-				$('.carousel-inner .item:nth-child(2) .thumbnails"').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(2) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
 	},
