@@ -29,26 +29,22 @@ $.ajax({
 			if(x==0) {
 				console.log(x+' é 0');
 				$('.carousel-inner').append('<div class="item active"><ul class="thumbnails"></ul></div>');
-				var im = true;
 			}
 			if(x==7) {
 				console.log(x+' é 7');
-				$('.carousel-inner').append('<div class="item"><ul class="thumbnails"></ul></div>');
-				var io = true;			
+				$('.carousel-inner').append('<div class="item"><ul class="thumbnails"></ul></div>');			
 			}
 			if(x==14) {
 				console.log(x+' é 14');
 				$('.carousel-inner').append('<div class="item"><ul class="thumbnails"></ul></div>');
-				var ip = true;
 			}			
-			if(im==true) {
+			if(x<7) {
+				console.log(x+' é menor 7');
 				$('.item:nth-child(0) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(io==true) {
+			if(x<14) {
+				console.log(x+' é menor 14');
 				$('.item:nth-child(1) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
-			}
-			if(ip==true) {
-				$('.item:nth-child(2) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
 	},
