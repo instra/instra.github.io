@@ -25,7 +25,7 @@ $.ajax({
 	type: 'GET',
 	data: {access_token: token, count: num_photos},
 	success: function(data){
-		for( x in data.data ){
+		for( x in data.data){
 			if(x==0) {
 				console.log(x+' é 0');
 				$('.carousel-inner').append('<div class="item active"><ul class="thumbnails"></ul></div>');
@@ -42,8 +42,8 @@ $.ajax({
 				console.log(x+' é menor 7');
 				$('.item:nth-child(0) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x<14) {
-				console.log(x+' é menor 14');
+			if(x>7 and x<14) {
+				console.log(x+' e maior que 7 e menor 14');
 				$('.item:nth-child(1) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
