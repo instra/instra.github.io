@@ -17,7 +17,7 @@ function getParameterByName(name, url) {
   var code = getParameterByName('code');
   
 var token = code,
-    num_photos = 7;
+    num_photos = 13;
  
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
@@ -42,13 +42,13 @@ $.ajax({
 				var ip = true;
 			}			
 			if(im==true) {
-				$('.item:nth-child(0) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(0) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(io==true) {
-				$('.item:nth-child(1) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(1) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(ip==true) {
-				$('.item:nth-child(2) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item:nth-child(2) ul.thumbnails').html('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
 	},
