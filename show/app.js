@@ -42,7 +42,7 @@ $.ajax({
 				console.log(x+' é menor 7');
 				$('.item:nth-child(0) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>7 and x<14) {
+			if(x>7 && x<14) {
 				console.log(x+' e maior que 7 e menor 14');
 				$('.item:nth-child(1) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
