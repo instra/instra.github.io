@@ -9,8 +9,11 @@ body {
 #rudr_instafeed li{
   float:left;
   width: 14%;
-  height: 14%;
   margin: 1px;
+}
+#rudr_instafeed li:hover {
+    opacity: 0.7;
+    transition: 2s;
 }
 #rudr_instafeed li img{
   max-width:100%;
