@@ -31,25 +31,25 @@ $.ajax({
 				console.log(x+' é 0');
 				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
 			}
-			if(x==7) {
+			if(x==5) {
 				console.log(x+' é 7');
 				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
 			}
-			if(x==14) {
+			if(x==10) {
 				console.log(x+' é 14');
-				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
+				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
 			}
-			if(x<7) {
+			if(x<5) {
 				console.log(x+' é menor 7');
-				$('.item.one ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.one ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>7 && x<14) {
+			if(x>5 && x<10) {
 				console.log(x+' e maior que 7 e menor 14');
-				$('.item.two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.two ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>14 && x<21) {
+			if(x>10 && x<15) {
 				console.log(x+' e maior que 7 e menor 14');
-				$('.item.two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.tree ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
 	},
