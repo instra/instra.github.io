@@ -17,7 +17,7 @@ function getParameterByName(name, url) {
   var code = getParameterByName('code');
   
 var token = code,
-    num_photos = 13;
+    num_photos = 17;
  
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
@@ -25,7 +25,7 @@ $.ajax({
 	type: 'GET',
 	data: {access_token: token, count: num_photos},
 	success: function(data){
-		console.log(data);
+		console.log(data.data);
 		for( x in data.data){
 			if(x==0) {
 				console.log(x+' é 0');
@@ -35,11 +35,19 @@ $.ajax({
 				console.log(x+' é 7');
 				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
 			}
+			if(x==14) {
+				console.log(x+' é 14');
+				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
+			}
 			if(x<7) {
 				console.log(x+' é menor 7');
-				$('.item one) ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item one ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(x>7 && x<14) {
+				console.log(x+' e maior que 7 e menor 14');
+				$('.item two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>14 && x<21) {
 				console.log(x+' e maior que 7 e menor 14');
 				$('.item two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
