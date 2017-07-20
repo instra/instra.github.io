@@ -13,40 +13,69 @@ function getParameterByName(name, url) {
     });
 
 var code = getParameterByName('code');
+var total = getParameterByName('total');
+var slide = getParameterByName('slide');
   
 var token = code,
-    num_photos = 13;
- 
+    num_photos = 11;
+if(total==3) {
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
 	dataType: 'jsonp',
 	type: 'GET',
 	data: {access_token: token, count: num_photos},
 	success: function(data){
-		console.log(data.data);
 		for( x in data.data){
 			if(x==0) {
-				console.log(x+' é 0');
+				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
+			}
+			if(x==3) {
+				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x==6) {
+				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x<3){
+				$('.item.one ul.thumbnails').append('<li class="col-sm-4"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>6 && x<9) {
+				$('.item.two ul.thumbnails').append('<li class="col-sm-4"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>9 && x<12) {
+				$('.item.tree ul.thumbnails').append('<li class="col-sm-4"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+}    
+if(total==4)
+{
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/self/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+		for( x in data.data){
+			if(x==0) {
 				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
 			}
 			if(x==4) {
-				console.log(x+' é 1');
 				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
 			}
 			if(x==9) {
-				console.log(x+' é 9');
 				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
 			}
 			if(x<4) {
-				console.log(x+' é menor 4');
 				$('.item.one ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(x>4 && x<9) {
-				console.log(x+' e maior que 4 e menor 9');
 				$('.item.two ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(x>9 && x<14) {
-				console.log(x+' e maior que 9 e menor 14');
 				$('.item.tree ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
@@ -55,5 +84,72 @@ $.ajax({
 		console.log(data);
 	}
 });
+}
+if(total==5) {
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/self/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+		for( x in data.data){
+			if(x==0) {
+				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
+			}
+			if(x==5) {
+				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x==10) {
+				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x<5){
+				$('.item.one ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>5 && x<10) {
+				$('.item.two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>10 && x<15) {
+				$('.item.tree ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+}
+if(total==6) {
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/self/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+		for( x in data.data){
+			if(x==0) {
+				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
+			}
+			if(x==6) {
+				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x==12) {
+				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
+			}
+			if(x<6){
+				$('.item.one ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>6 && x<12) {
+				$('.item.two ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+			if(x>12 && x<18) {
+				$('.item.tree ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+}
 
   });
