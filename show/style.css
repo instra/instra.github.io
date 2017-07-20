@@ -116,6 +116,9 @@ ul.thumbnails li {
     margin-right: 0px;
     margin-left: 0px;
 }
+.col-sm-2-2 {
+    width: 20%;
+}
 /* Mobile Only */
 @media (max-width: 767px) {
     .page-header, .control-box {
