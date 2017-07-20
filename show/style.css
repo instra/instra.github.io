@@ -108,6 +108,14 @@ nav {
     float: right;
     right: 0;
 }
+ul.thumbnails li {
+    padding: 1px;
+}
+.thumbnail a>img, .thumbnail>img {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
 /* Mobile Only */
 @media (max-width: 767px) {
     .page-header, .control-box {
