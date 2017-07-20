@@ -14,10 +14,31 @@ function getParameterByName(name, url) {
 
 var code = getParameterByName('code');
 var total = getParameterByName('total');
-var slide = getParameterByName('slide');
+var num = getParameterByName('num');
   
 var token = code,
-    num_photos = 11;
+    num_photos = 14;
+if(total==null && slide=true) {
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/self/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+		for( x in data.data){
+			if(x==0) {
+				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
+			}
+			if(x<6){
+				$('.item.one ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+			}			
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+}
 if(total==3) {
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
@@ -103,13 +124,13 @@ $.ajax({
 				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
 			}
 			if(x<5){
-				$('.item.one ul.thumbnails').append('<li class="col-sm-2-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.one ul.thumbnails').append('<li class="col-sm-2 grid-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(x>=5 && x<10) {
-				$('.item.two ul.thumbnails').append('<li class="col-sm-2-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.two ul.thumbnails').append('<li class="col-sm-2 grid-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 			if(x>=10 && x<15) {
-				$('.item.tree ul.thumbnails').append('<li class="col-sm-2-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
+				$('.item.tree ul.thumbnails').append('<li class="col-sm-2 grid-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
 	},
