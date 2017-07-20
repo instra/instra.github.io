@@ -19,7 +19,7 @@ var slide = getParameterByName('slide');
   
 var token = code,
     num_photos = num;
-if(total==null && slide==true) {
+if(slide==false) {
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
 	dataType: 'jsonp',
