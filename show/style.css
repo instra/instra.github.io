@@ -91,7 +91,23 @@ ul.thumbnails {
     border: 0px solid #ddd;
     border-radius: 0px;
 }
-
+nav {
+    width: 83%;
+    position: fixed;
+    top: 80px;
+}
+.pager li {
+    position: absolute;
+    display: inline;
+}
+.pager li:first-child {
+    float: left;
+    left: 0;
+}
+.pager li:last-child {
+    float: right;
+    right: 0;
+}
 /* Mobile Only */
 @media (max-width: 767px) {
     .page-header, .control-box {

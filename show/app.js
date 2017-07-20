@@ -29,24 +29,24 @@ $.ajax({
 				console.log(x+' é 0');
 				$('.carousel-inner').append('<div class="item one active"><ul class="thumbnails"></ul></div>');
 			}
-			if(x==5) {
-				console.log(x+' é 7');
+			if(x==4) {
+				console.log(x+' é 1');
 				$('.carousel-inner').append('<div class="item two"><ul class="thumbnails"></ul></div>');			
 			}
-			if(x==10) {
-				console.log(x+' é 14');
+			if(x==9) {
+				console.log(x+' é 9');
 				$('.carousel-inner').append('<div class="item tree"><ul class="thumbnails"></ul></div>');			
 			}
-			if(x<5) {
-				console.log(x+' é menor 7');
+			if(x<4) {
+				console.log(x+' é menor 4');
 				$('.item.one ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>5 && x<10) {
-				console.log(x+' e maior que 7 e menor 14');
+			if(x>4 && x<9) {
+				console.log(x+' e maior que 4 e menor 9');
 				$('.item.two ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>10 && x<15) {
-				console.log(x+' e maior que 7 e menor 14');
+			if(x>9 && x<14) {
+				console.log(x+' e maior que 9 e menor 14');
 				$('.item.tree ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
