@@ -12,12 +12,10 @@ function getParameterByName(name, url) {
       interval: 6000
     });
 
-
-
-  var code = getParameterByName('code');
+var code = getParameterByName('code');
   
 var token = code,
-    num_photos = 17;
+    num_photos = 13;
  
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
