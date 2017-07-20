@@ -15,11 +15,11 @@ function getParameterByName(name, url) {
 var code = getParameterByName('code');
 var total = getParameterByName('total');
 var num = getParameterByName('num');
-var slide = getParameterByName('slide');
   
 var token = code,
     num_photos = num;
-if(slide==false) {
+if(total==0) {
+console.log('num slide');
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/self/media/recent',
 	dataType: 'jsonp',
