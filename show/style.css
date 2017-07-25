@@ -124,6 +124,9 @@ ul.thumbnails li:hover {
 .col-sm-2 .grid-2 {
     width: 20%!important;
 }
+.container {
+    width: 1238px;
+}
 /* Mobile Only */
 @media (max-width: 767px) {
     .page-header, .control-box {

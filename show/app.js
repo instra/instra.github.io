@@ -9,7 +9,7 @@ function getParameterByName(name, url) {
 }
   $(document).ready(function() {
     $('.carousel').carousel({
-      interval: 6000
+      interval: 7000
     });
 
 var code = getParameterByName('code');
