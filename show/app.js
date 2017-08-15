@@ -67,7 +67,7 @@ $.ajax({
 			if(x>=3 && x<6) {
 				$('.item.two ul.thumbnails').append('<li class="col-sm-4"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>=6 && x<6) {
+			if(x>=6 && x<9) {
 				$('.item.tree ul.thumbnails').append('<li class="col-sm-4"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
@@ -101,7 +101,7 @@ $.ajax({
 			if(x>=4 && x<8) {
 				$('.item.two ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>=8 && x<12) {
+			if(x>=8 && x<13) {
 				$('.item.tree ul.thumbnails').append('<li class="col-sm-3"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
@@ -167,7 +167,7 @@ $.ajax({
 			if(x>=6 && x<12) {
 				$('.item.two ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
-			if(x>=12 && x<17) {
+			if(x>=12 && x<18) {
 				$('.item.tree ul.thumbnails').append('<li class="col-sm-2"><div class="fff"><div class="thumbnail"><a href="'+data.data[x].link+'" target="_blank"><img alt="" src="'+data.data[x].images.low_resolution.url+'"></a></div></div></li>');
 			}
 		}
